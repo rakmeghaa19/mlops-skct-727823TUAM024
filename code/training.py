@@ -17,7 +17,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 
 warnings.filterwarnings("ignore")
-
 # -----------------------------
 # Basic details
 # -----------------------------
