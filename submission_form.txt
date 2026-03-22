@@ -1,0 +1,8 @@
+Name: Megha A
+Roll Number: 727823TUAM024
+MLflow Experiment Name: SKCT_727823TUAM024_RecommendedPortfolio
+Best Run ID: f10a0fca0fd0468493f8e1a347571cc8
+Best Metric Value: R2 = 0.7032729513563983
+Azure Run ID: TO_BE_UPDATED
+GitHub URL: TO_BE_UPDATED
+Total Commits: TO_BE_UPDATED

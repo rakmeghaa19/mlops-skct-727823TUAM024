@@ -1,0 +1,31 @@
+$schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
+type: pipeline
+
+display_name: robo_advisor_pipeline_727823TUAM024
+experiment_name: SKCT_727823TUAM024_Pipeline
+
+settings:
+  default_compute: azureml:cpu-cluster
+
+jobs:
+  data_prep_step:
+    type: command
+    code: ./code
+    command: python data_prep.py
+    environment: azureml:AzureML-sklearn-1.5:1
+
+  train_step:
+    type: command
+    code: ./code
+    command: python train_pipeline.py
+    environment: azureml:AzureML-sklearn-1.5:1
+    depends_on:
+      - data_prep_step
+
+  evaluate_step:
+    type: command
+    code: ./code
+    command: python evaluate.py
+    environment: azureml:AzureML-sklearn-1.5:1
+    depends_on:
+      - train_step
